@@ -1,0 +1,100 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: "DM Serif Text", serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 18px;
+    text-align: center;
+    background-color:  #fdf0d5;
+    color: #260701;
+}
+
+#titulo {
+    position: fixed;
+    margin-bottom: 25%;
+    font-size: 1.5em;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+
+}
+
+button {
+    font-family: "DM Serif Text", serif;
+    font-weight: bolder;
+    font-style: normal;
+    font-size: 18px;
+    background-color: #260701;
+    color: #fdf0d5;
+    position: static;
+    margin-top: 25%;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    border-radius: 10px;
+}
+
+.escondido {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+#titulo.sair {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+#mensagem.mostrar,
+button.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.none {
+    display: none;
+}
+
+.container{
+    padding: 8% 20%;
+}
+
+@media (max-width: 600px) {
+    html, body {
+        font-size: 16px; 
+    }
+
+    #titulo { 
+        position: absolute;   
+        top: 50%;
+        font-size: 1.2em;
+        margin-bottom: 100%;
+    }
+
+    button {
+        margin-top: 100%;
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    .container {
+        padding: 10% 10%;
+    }
+
+    .mensagem-inicial{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+}
+
