@@ -5,8 +5,7 @@
     const audio = document.getElementById('audio');
 
     // Transição do título
-    setTimeout(function() {
-        console.log('Título começa a desaparecer');  // Log para depuração
+    setTimeout(function() {        
         titulo.classList.add('sair');
 
         // Mostrar o botão após a transição do título
@@ -14,7 +13,7 @@
             console.log('Botão deve aparecer agora');  // Log para depuração
             playButton.classList.add('mostrar');
         }, 1000); // Tempo igual ao da transição do título
-    }, 2000);
+    }, 4000);
 
     // Evento de clique no botão
     playButton.addEventListener('click', function() {
